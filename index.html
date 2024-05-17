@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Croissants</title>
+    <link href ="styles.css" rel="stylesheet">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="Title"></div>
+    <div id="Ingridients"></div>
+    <div id="Preparation" class="divPrepar"></div>
+    <div id="Cooking"></div>    
+    <script type="text/babel" src="Title.jsx">
+    </script>
+    <script type="text/babel" src="Ingridients.jsx">
+    </script>
+    <script type="text/babel" src="Preparation.jsx">
+    </script>
+    <script type="text/babel" src="Cooking.jsx">
+    </script>   
+       <script type="text/babel">
+        "use strict"; 
+        const rootNode = document.getElementById("Title");   
+        const root = ReactDOM.createRoot(rootNode);
+        root.render(
+            <React.StrictMode>
+                <Title/>
+            </React.StrictMode>
+         );
+        const rootNode1 = document.getElementById("Ingridients");   
+        const root1 = ReactDOM.createRoot(rootNode1);
+        root1.render(
+            <React.StrictMode>
+                <Ingridients/>
+            </React.StrictMode>
+         );
+         const rootNode3 = document.getElementById("Preparation");   
+        const root3 = ReactDOM.createRoot(rootNode3);
+        root3.render(
+            <React.StrictMode>
+                <Preparation/>
+            </React.StrictMode>
+         );
+        const rootNode2 = document.getElementById("Cooking");   
+        const root2 = ReactDOM.createRoot(rootNode2);
+        root2.render(
+            <React.StrictMode>
+                <Cooking/>
+            </React.StrictMode>          
+         );        
+
+       </script>
+</body>
+</html>
